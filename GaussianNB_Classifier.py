@@ -12,7 +12,7 @@ from sklearn.metrics import classification_report
 
 # loads iris dataset
 names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
-dataset = pandas.read_csv('./iris.csv', names=names)
+dataset = pd.read_csv('./iris.csv', names=names)
 
 array = dataset.values # turn numpy dataset into array of values
 
@@ -23,11 +23,11 @@ split2b = array[75:100,:] # second 25 of iris-versicolor
 split1c = array[100:125,:] # first 25 of iris-virginica
 split2c = array[125:150,:] # second 25 of iris-virginica
 
-a = numpy.concatenate([split1a, split1b])
-b = numpy.concatenate([split2a, split2b])
+a = np.concatenate([split1a, split1b])
+b = np.concatenate([split2a, split2b])
 
-firstHalf = numpy.concatenate([a, split1c]) 
-secondHalf = numpy.concatenate([b, split2c])
+firstHalf = np.concatenate([a, split1c]) 
+secondHalf = np.concatenate([b, split2c])
 
 X1 = firstHalf[:,0:4]
 y1 = firstHalf[:,4]
